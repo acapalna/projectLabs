@@ -41,6 +41,7 @@ public class Catel {
             if (i == 20 && varsta > (varstaMaxima + 1)){
                 System.out.println(name + " a murit. De ce tot ii infunzi mancarea in gura?????");
             }
+            //TODO continue
 
         }
     }
