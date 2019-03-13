@@ -7,7 +7,7 @@ public class Catel {
     private String name;
     private int greutate;
     private int varsta;
-    private final int varstaMaxima = 11;
+    private final int varstaMaxima = 10;
     private final int[] greutateViata = {5, 8, 10, 12, 14, 15, 16, 17, 18, 19, 20};
 
     public void latra(){
