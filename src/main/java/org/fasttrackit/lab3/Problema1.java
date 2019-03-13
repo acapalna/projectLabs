@@ -1,23 +1,8 @@
 package org.fasttrackit.lab3;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Problema1 {
-    private Scanner sc = new Scanner(System.in);
-    private double getNumber(){
-        double nr = 0;
-        while(true){
-            try{
-                System.out.println("Introduceti un numar: ");
-                nr = Double.valueOf(sc.nextLine());
-                break;
-            }catch(NumberFormatException e){
-                System.out.println("Acesta nu este un numar. Incercati din nou.");
-            }
-        }
-        return nr;
-    }
 
     public void exercitiul1(){
         System.out.println("Acest program v-a calcula media artimetica a 2 numere.");
@@ -26,14 +11,14 @@ public class Problema1 {
         double nr2 = 0;
 
         do{
-            nr1 = getNumber();
+            nr1 = Helpers.getNumberFromUser();
             if (nr1 < 0) {
                 System.out.println(numarGresit);
             }
         }while(nr1 < 0);
 
         do{
-            nr2 = getNumber();
+            nr2 = Helpers.getNumberFromUser();
             if (nr2 < 0) {
                 System.out.println(numarGresit);
             }
