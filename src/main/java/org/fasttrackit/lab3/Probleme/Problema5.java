@@ -1,4 +1,4 @@
-package org.fasttrackit.lab3;
+package org.fasttrackit.lab3.Probleme;
 
 import static org.fasttrackit.lab3.Helpers.*;
 
@@ -41,14 +41,5 @@ public class Problema5 {
             generateTablaInmultiriiCuNr(i);
         }
 
-    }
-
-    //TODO add this to helpers
-    public void generateTablaInmultiriiCuNr(double number){
-        for(int i = 0; i<=10; i++){
-            double line = i * number;
-            String print = i + " X " + number + " = " + line;
-            System.out.println(print);
-        }
     }
 }

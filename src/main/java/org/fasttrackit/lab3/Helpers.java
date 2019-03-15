@@ -1,11 +1,19 @@
 package org.fasttrackit.lab3;
 
+import org.fasttrackit.lab3.Probleme.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Helpers {
     private static Scanner sc = new Scanner(System.in);
+    public static Problema1 problema1 = new Problema1();
+    public static Problema2 problema2 = new Problema2();
+    public static Problema3 problema3 = new Problema3();
+    public static Problema4 problema4 = new Problema4();
+    public static Problema5 problema5 = new Problema5();
+    public static Problema6 problema6 = new Problema6();
 
     public static double getNumberFromUser(){
 
@@ -93,4 +101,20 @@ public class Helpers {
         return biggestNumber;
     }
 
+    public static void generateTablaInmultiriiCuNr(double number){
+        for(int i = 0; i<=10; i++){
+            double line = i * number;
+            String print = i + " X " + number + " = " + line;
+            System.out.println(print);
+        }
+    }
+
+    public static int calculateSumOfDigits(int number){
+        int sum = 0;
+        while (number != 0){
+            sum = sum + number % 10;
+            number = number/10;
+        }
+        return sum;
+    }
 }

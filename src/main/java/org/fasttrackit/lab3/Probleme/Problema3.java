@@ -1,4 +1,4 @@
-package org.fasttrackit.lab3;
+package org.fasttrackit.lab3.Probleme;
 
 import java.util.List;
 
