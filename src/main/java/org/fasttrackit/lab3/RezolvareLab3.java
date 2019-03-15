@@ -13,6 +13,7 @@ public class RezolvareLab3 {
         problema5.exercitiul5();
         problema5.exercitiul5Varianta2();
         problema6.exercitiul6();
+        problema7.exercitiul7();
 
 
 

@@ -14,6 +14,7 @@ public class Helpers {
     public static Problema4 problema4 = new Problema4();
     public static Problema5 problema5 = new Problema5();
     public static Problema6 problema6 = new Problema6();
+    public static Problema7 problema7 = new Problema7();
 
     public static double getNumberFromUser(){
 
@@ -73,7 +74,7 @@ public class Helpers {
                 myList.add(Double.valueOf(sc.nextLine()));
             }
         }catch(NumberFormatException e) {
-            System.out.println("Ati introdus ceva ce nu este un numar. Programul v-a determina cel mai mare numar introdus.");
+            System.out.println("Ati introdus ceva ce nu este un numar. Programul v-a prelucra numarul introdus.");
         }
 
         return myList;
@@ -101,7 +102,7 @@ public class Helpers {
         return biggestNumber;
     }
 
-    public static void generateTablaInmultiriiCuNr(double number){
+    public static void generateMultiplicationTable(double number){
         for(int i = 0; i<=10; i++){
             double line = i * number;
             String print = i + " X " + number + " = " + line;

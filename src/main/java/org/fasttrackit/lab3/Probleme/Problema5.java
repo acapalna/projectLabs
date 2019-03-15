@@ -19,7 +19,7 @@ public class Problema5 {
 
         for(double i = n; i<= m; i++){
             System.out.println("Se genereaza tabla inmultirii cu " + i);
-            generateTablaInmultiriiCuNr(i);
+            generateMultiplicationTable(i);
         }
     }
 
@@ -38,7 +38,7 @@ public class Problema5 {
 
         for(int i = (int) n; i<= (int) m; i++){
             System.out.println("Se genereaza tabla inmultirii cu " + i + ", folosind doar numerele intregi.");
-            generateTablaInmultiriiCuNr(i);
+            generateMultiplicationTable(i);
         }
 
     }
