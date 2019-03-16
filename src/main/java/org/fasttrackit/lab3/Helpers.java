@@ -15,6 +15,7 @@ public class Helpers {
     public static Problema5 problema5 = new Problema5();
     public static Problema6 problema6 = new Problema6();
     public static Problema7 problema7 = new Problema7();
+    public static Problema8 problema8 = new Problema8();
 
     public static double getNumberFromUser(){
 
@@ -118,4 +119,16 @@ public class Helpers {
         }
         return sum;
     }
+
+    public static int reverseOfANumber(int number){
+        int reverseNumber = 0;
+        while(number != 0) {
+            int nr = number % 10;
+            reverseNumber = reverseNumber * 10 + nr;
+            number /= 10;
+        }
+        return reverseNumber;
+    }
+
+
 }
