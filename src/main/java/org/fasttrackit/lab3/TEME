@@ -7,27 +7,25 @@
 2x5=10
 ….
 10x5=50
-5.	Sa se genereze o tabla a inmulturii intre N si M, unde N si M sunt citite de la tastatura.
+5.Sa se genereze o tabla a inmulturii intre N si M, unde N si M sunt citite de la tastatura.
       De ex pentru N=3, si M = 6 se va genera table inmultirii cu 3, cu 4, cu 5 si cu 6
-      6.  Se da un numar natural a, de exemplu
+6.Se da un numar natural a, de exemplu
   int a = 64321
 
-a) Sa se calculeze suma cifrelor numarului cat si produsul lor
+a)Sa se calculeze suma cifrelor numarului cat si produsul lor
 de ex pentru numarul de mai sus vom avea
 suma = 6+4+3+2+1
 produsul = 6*4*3*2*1
 
-b) sa se precizeze cate cifre are numarul citit
+b)sa se precizeze cate cifre are numarul citit
 de ex pentru numarul de mai sus
 cifre=5
 
-c) sa se precizeze cifra maxima si minima a numarului a
+c)sa se precizeze cifra maxima si minima a numarului a
 
-d) sa se precizeze cifra de control a numarului a: se calculeaza suma cifrelor, s  apoi suma cifrelor sumei s , si tot asa pana ramane o singura cifra care se numeste cifra de control
-
+d)sa se precizeze cifra de control a numarului a: se calculeaza suma cifrelor, s  apoi suma cifrelor sumei s , si tot asa pana ramane o singura cifra care se numeste cifra de control
 Se va folosi notiunea din matematica conform careia restul impartirii la 10 il reprezinta ultima cifra a numarului iar catul numarul fara ultima cifra.
 asadar un posibil pseudocod ar fi:
-
 declar cifra a si ii atribui o valore
 cat timp a diferit de zero
     cifra = a % 10
@@ -35,32 +33,29 @@ cat timp a diferit de zero
    a = a/10
 end cat timp
 
-
-
-7. Se da un numar a. Se se afiseze numarul invers
+7.Se da un numar a. Se se afiseze numarul invers
 de ex
 int a = 476
 se va obtine
 int invers =674
 
-8. Se da un numar a. Sa se determine daca numarul este palindrom ori nu.
+8.Se da un numar a. Sa se determine daca numarul este palindrom ori nu.
 Un numar este palindrom daca este egal cu numarul inversat
 de ex
 int a = 12344321 este palindrom
 
-9. Se da un numar a.
-Se se afiseze un numar b format doar din numerele impare ale numarului a, si un numar c format din patratul numerelor pare ale numarului a.
+9.Se da un numar a. Se se afiseze un numar b format doar din numerele impare ale numarului a, si un numar c format din patratul numerelor pare ale numarului a.
 
-10. Se da un sir de numere ordonate crescator.
+10.Se da un sir de numere ordonate crescator.
 Se va determina daca un numar n exista in sir, si daca exista se va afisa pozitia pe care s-a gasit, altfel se va afisa -1.
 Cu ce difera algoritmul cand sirul este ordonat crescator de cazul cand sirul este neordonat.
 sirul va fi definit asa, numerele sunt de exemplu.
 int[] a = {1,3,4,6,7,8,10,12,14,23};
 
-11. Se se calculeze suma primelor n numere naturale, unde n este declarat ca si
+11.Se se calculeze suma primelor n numere naturale, unde n este declarat ca si
 int n = 20; //sau o alta valoare
 
-12. Se da un sir de numere naturale, ideal de peste doua cifre. Sa se determine cea mai mare valoare din sir care are suma de control sub 3. Suma de control a fost definita mai sus.
+12.Se da un sir de numere naturale, ideal de peste doua cifre. Sa se determine cea mai mare valoare din sir care are suma de control sub 3. Suma de control a fost definita mai sus.
 de ex
 int[] sir ={12, 34,35, 11,34};
 

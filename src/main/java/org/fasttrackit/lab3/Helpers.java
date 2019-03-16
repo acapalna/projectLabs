@@ -2,9 +2,7 @@ package org.fasttrackit.lab3;
 
 import org.fasttrackit.lab3.Probleme.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Helpers {
     private static Scanner sc = new Scanner(System.in);
@@ -16,6 +14,7 @@ public class Helpers {
     public static Problema6 problema6 = new Problema6();
     public static Problema7 problema7 = new Problema7();
     public static Problema8 problema8 = new Problema8();
+    public static Problema9 problema9 = new Problema9();
 
     public static double getNumberFromUser(){
 
@@ -128,6 +127,18 @@ public class Helpers {
             number /= 10;
         }
         return reverseNumber;
+    }
+
+    public static List<Integer> integerToList(int number){
+        List<Integer> myList = new ArrayList<>();
+        while (number != 0){
+            int nr = number % 10;
+            myList.add(nr);
+            number = number/10;
+        }
+        Collections.reverse(myList);
+
+        return myList;
     }
 
 
