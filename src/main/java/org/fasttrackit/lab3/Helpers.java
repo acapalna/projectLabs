@@ -18,7 +18,7 @@ public class Helpers {
     public static Problema10 problema10 = new Problema10();
     public static Problema11 problema11 = new Problema11();
     public static Problema12 problema12 = new Problema12();
-    public static Problema13 problema13 = new Problema13();
+    public static Problema13_15 problema13 = new Problema13_15();
 
     public static double getNumberFromUser(){
 

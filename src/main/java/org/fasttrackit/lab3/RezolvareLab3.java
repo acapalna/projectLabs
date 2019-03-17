@@ -20,7 +20,9 @@ public class RezolvareLab3 {
 //        problema10.exercitiul10();
 //        problema11.exercitiul11();
 //        problema12.exercitiul12();
-        problema13.exercitiul13();
+//        problema13.exercitiul13();
+//        problema13.exercitiul14();
+        problema13.exercitiul15();
 
 
 
