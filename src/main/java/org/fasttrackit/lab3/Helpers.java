@@ -5,7 +5,7 @@ import org.fasttrackit.lab3.Probleme.*;
 import java.util.*;
 
 public class Helpers {
-    private static Scanner sc = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
     public static Problema1 problema1 = new Problema1();
     public static Problema2 problema2 = new Problema2();
     public static Problema3 problema3 = new Problema3();
@@ -15,6 +15,7 @@ public class Helpers {
     public static Problema7 problema7 = new Problema7();
     public static Problema8 problema8 = new Problema8();
     public static Problema9 problema9 = new Problema9();
+    public static Problema10 problema10 = new Problema10();
 
     public static double getNumberFromUser(){
 
@@ -24,7 +25,7 @@ public class Helpers {
             counter++;
             try{
                 System.out.println("Introduceti un numar: ");
-                nr = Double.valueOf(sc.nextLine());
+                nr = Double.valueOf(scanner.nextLine());
                 break;
             }catch(NumberFormatException e){
                 if(counter > 2){
@@ -71,7 +72,7 @@ public class Helpers {
         try {
             while (true) {
                 System.out.println("Introduceti un numar intreg: ");
-                myList.add(Double.valueOf(sc.nextLine()));
+                myList.add(Double.valueOf(scanner.nextLine()));
             }
         }catch(NumberFormatException e) {
             System.out.println("Ati introdus ceva ce nu este un numar. Programul v-a prelucra numarul introdus.");
