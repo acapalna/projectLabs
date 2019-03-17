@@ -10,7 +10,7 @@ public class Problema3 {
         System.out.println("Acest program v-a determina cel mai mare numar introdus de la tastatura.");
         System.out.println("Daca ati introdus suficiente numere, introduceti OK");
 
-        List<Double> numere = getListOfNumbers();
+        List<Double> numere = getListOfDoubleNumbers();
 
         double biggestNumber = determineTheBiggestNumber(numere);
 

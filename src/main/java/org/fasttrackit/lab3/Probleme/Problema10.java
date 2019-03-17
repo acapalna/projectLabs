@@ -20,7 +20,7 @@ public class Problema10 {
             if (askNumber == 1){
                 System.out.println("Acum vom scrie sirul. Introduceti cate un numar urmat de tasta enter. " +
                         "Cand ati introdus suficiente numere, apasati o litera.");
-                lista = (List<Integer>)getListOfNumbers();
+                lista = getListOfIntegerNumbers();
                 System.out.print("Ati introdus sirul: ");
                 for (int i=0; i<lista.size();i++){
                     System.out.print(i + ", ");

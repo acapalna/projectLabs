@@ -17,6 +17,7 @@ public class Helpers {
     public static Problema9 problema9 = new Problema9();
     public static Problema10 problema10 = new Problema10();
     public static Problema11 problema11 = new Problema11();
+    public static Problema12 problema12 = new Problema12();
 
     public static double getNumberFromUser(){
 
@@ -68,12 +69,26 @@ public class Helpers {
         }
     }
 
-    public static List getListOfNumbers(){
+    public static List<Double> getListOfDoubleNumbers(){
         List<Double> myList = new ArrayList<>();
         try {
             while (true) {
                 System.out.println("Introduceti un numar intreg: ");
                 myList.add(Double.valueOf(scanner.nextLine()));
+            }
+        }catch(NumberFormatException e) {
+            System.out.println("Ati introdus ceva ce nu este un numar. Programul v-a prelucra numarul introdus.");
+        }
+
+        return myList;
+    }
+
+    public static List<Integer> getListOfIntegerNumbers(){
+        List<Integer> myList = new ArrayList<>();
+        try {
+            while (true) {
+                System.out.println("Introduceti un numar intreg: ");
+                myList.add(Integer.valueOf(scanner.nextLine()));
             }
         }catch(NumberFormatException e) {
             System.out.println("Ati introdus ceva ce nu este un numar. Programul v-a prelucra numarul introdus.");
@@ -143,5 +158,13 @@ public class Helpers {
         return myList;
     }
 
+    public static int calculateCheckSum(int number){
+        int sum = calculateSumOfDigits(number);
 
+        while(sum > 9){
+            sum = calculateSumOfDigits(sum);
+        }
+
+        return sum;
+    }
 }
