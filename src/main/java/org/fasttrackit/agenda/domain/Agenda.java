@@ -3,6 +3,8 @@ package org.fasttrackit.agenda.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.fasttrackit.agenda.domain.Helpers.*;
+
 public class Agenda {
 
 
@@ -14,25 +16,28 @@ public class Agenda {
     public static void main(String[] args) {
         Agenda agenda = new Agenda();
 
-        Contact firstContact = new Contact();
-        firstContact.setLastName("Pop");
-        firstContact.setFirstName("Costel");
-
-        Contact secondContact = new Contact();
-        secondContact.setLastName("Pop");
-        secondContact.setFirstName("Ana");
-
-//        System.out.println(firstContact.toString());
-//        System.out.println(secondContact.toString());
-//
-//        System.out.println("Check equals with == " + (secondContact==firstContact));
-//        System.out.println("Check equals with equals " + secondContact.equals(firstContact));
+        System.out.println("Create first contact");
+        Contact firstContact = createNewContactFromUser();
+        System.out.println("Create second contact");
+        Contact secondContact = createNewContactFromUser();
 
 
+//        Contact secondContact = new Contact();
+//        secondContact.setLastName("Pop");
+//        secondContact.setFirstName("Ana");
+//        secondContact.setPhone("012345678");
+//        secondContact.setAddress("Atat s-a putut");
+
+        System.out.println("Insert agenda name:");
+        agenda.setNameAgenda(readFromKeyboard());
+        System.out.println("Insert agenda owner");
+        agenda.setOwner(readFromKeyboard());
         agenda.getContactList().add(firstContact);
         agenda.getContactList().add(secondContact);
 
 
+        printAgenda(agenda);
+        System.out.println("");
 
     }
 
@@ -60,5 +65,9 @@ public class Agenda {
 
     public void setContactList(List<Contact> contactList) {
         this.contactList = contactList;
+    }
+
+    public void saveAgendaToXML(Agenda agenda){
+
     }
 }

@@ -32,7 +32,6 @@ public class Contact {
         this.address = address;
     }
 
-
     public void setFirstName(String firstNameParam){
         if(firstNameParam.equalsIgnoreCase("")){
             throw new IllegalArgumentException("First name can not be empty.");
@@ -56,35 +55,36 @@ public class Contact {
 //    get();
 //    display();
 
-    public String toString(){
-        return "First name is: " + firstName + "." +
-                "\nLast name is: " + lastName;
+//    public String toString(){
+//        return "First name: " + firstName + "." +
+//                "\nLast name: " + lastName+ "." +
+//                "\nPhone number: " + phone+ "." +
+//                "\nAddress: " + address;
+//    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
 
     @Override
-    public boolean equals(Object o){
-        Contact second = (Contact) o;
-        if(((Contact) o).getFirstName().equals(this.firstName)
-                && second.getLastName().equals(this.lastName)){
-            return true;
-        }else {
-            return false;
-        }
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Contact)) return false;
+        Contact contact = (Contact) o;
+        return Objects.equals(firstName, contact.firstName) &&
+                Objects.equals(lastName, contact.lastName) &&
+                Objects.equals(phone, contact.phone) &&
+                Objects.equals(address, contact.address);
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (!(o instanceof Contact)) return false;
-//        Contact contact = (Contact) o;
-//        return Objects.equals(firstName, contact.firstName) &&
-//                Objects.equals(lastName, contact.lastName) &&
-//                Objects.equals(phone, contact.phone) &&
-//                Objects.equals(address, contact.address);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(firstName, lastName, phone, address);
-//    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, phone, address);
+    }
 }
