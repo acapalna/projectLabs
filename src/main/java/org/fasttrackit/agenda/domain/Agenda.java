@@ -6,9 +6,6 @@ import java.util.List;
 import static org.fasttrackit.agenda.domain.Helpers.*;
 
 public class Agenda {
-
-
-
     private String nameAgenda;
     private String owner;
     private List<Contact> contactList = new ArrayList<>();
@@ -16,28 +13,37 @@ public class Agenda {
     public static void main(String[] args) {
         Agenda agenda = new Agenda();
 
-        System.out.println("Create first contact");
-        Contact firstContact = createNewContactFromUser();
-        System.out.println("Create second contact");
-        Contact secondContact = createNewContactFromUser();
-
-
+//        Contact firstContact = new Contact();
+//        firstContact.setLastName("vraja");
+//        firstContact.setFirstName("Ion");
+//        firstContact.setPhone("333333333");
+//        firstContact.setAddress("Asta-i primul");
+//
 //        Contact secondContact = new Contact();
 //        secondContact.setLastName("Pop");
 //        secondContact.setFirstName("Ana");
 //        secondContact.setPhone("012345678");
 //        secondContact.setAddress("Atat s-a putut");
+//
+//        agenda.setNameAgenda("PrimaAgenda");
+//        agenda.setOwner("Burcus");
 
         System.out.println("Insert agenda name:");
         agenda.setNameAgenda(readFromKeyboard());
         System.out.println("Insert agenda owner");
         agenda.setOwner(readFromKeyboard());
-        agenda.getContactList().add(firstContact);
-        agenda.getContactList().add(secondContact);
 
+        System.out.println("Create first contact");
+        Contact firstContact = createNewContactFromUser();
+        agenda.getContactList().add(firstContact);
+
+        System.out.println("Create second contact");
+        Contact secondContact = createNewContactFromUser();
+        agenda.getContactList().add(secondContact);
 
         printAgenda(agenda);
         System.out.println("");
+        SaveToXml.WriteXMLFile(agenda);
 
     }
 

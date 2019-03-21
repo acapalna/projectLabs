@@ -34,11 +34,6 @@ public class Helpers {
         return a;
     }
 
-    public static String getFromKeyboard(){
-        String a = "";
-        for
-    }
-
     public static void printAgenda(Agenda agenda){
         System.out.println("Agenda name: " + agenda.getNameAgenda());
         System.out.println("Agenda owner: " + agenda.getOwner());
