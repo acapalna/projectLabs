@@ -1,5 +1,7 @@
-package org.fasttrackit.agenda.domain;
+package org.fasttrackit.agenda.domain.helpers;
 
+import org.fasttrackit.agenda.domain.Agenda;
+import org.fasttrackit.agenda.domain.Contact;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -13,9 +15,10 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 
-public class SaveToXml {
+public class XmlManipulation {
+    private static String pathToXMLFiles = "src\\main\\java\\org\\fasttrackit\\agenda\\domain\\saves\\";
 
-    public static void WriteXMLFile (Agenda agenda) {
+    public static void writeAgendaToXMLFile(Agenda agenda) {
 
         try {
 
@@ -71,7 +74,7 @@ public class SaveToXml {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File("src\\main\\java\\org\\fasttrackit\\agenda\\domain\\saves\\" + agenda.getNameAgenda() + ".xml"));
+            StreamResult result = new StreamResult(new File(pathToXMLFiles + agenda.getNameAgenda() + ".xml"));
 
             // Output to console for testing
             // StreamResult result = new StreamResult(System.out);

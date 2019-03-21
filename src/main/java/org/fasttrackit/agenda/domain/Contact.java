@@ -55,13 +55,6 @@ public class Contact {
 //    get();
 //    display();
 
-//    public String toString(){
-//        return "First name: " + firstName + "." +
-//                "\nLast name: " + lastName+ "." +
-//                "\nPhone number: " + phone+ "." +
-//                "\nAddress: " + address;
-//    }
-
     @Override
     public String toString() {
         return "Contact{" +

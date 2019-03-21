@@ -1,13 +1,15 @@
-package org.fasttrackit.agenda.domain;
+package org.fasttrackit.agenda.domain.helpers;
 
-import java.sql.SQLOutput;
+import org.fasttrackit.agenda.domain.Agenda;
+import org.fasttrackit.agenda.domain.Contact;
+
 import java.util.Scanner;
 
 public class Helpers {
     private static Scanner scanner = new Scanner(System.in);
 
 
-    public static  Contact createNewContactFromUser(){
+    public static Contact createNewContactFromUser(){
         Contact contact = new Contact();
 
         System.out.println("Insert first name:");

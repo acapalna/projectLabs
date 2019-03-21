@@ -1,9 +1,11 @@
 package org.fasttrackit.agenda.domain;
 
+import org.fasttrackit.agenda.domain.helpers.XmlManipulation;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.fasttrackit.agenda.domain.Helpers.*;
+import static org.fasttrackit.agenda.domain.helpers.Helpers.*;
 
 public class Agenda {
     private String nameAgenda;
@@ -18,12 +20,14 @@ public class Agenda {
 //        firstContact.setFirstName("Ion");
 //        firstContact.setPhone("333333333");
 //        firstContact.setAddress("Asta-i primul");
+//        agenda.getContactList().add(firstContact);
 //
 //        Contact secondContact = new Contact();
 //        secondContact.setLastName("Pop");
 //        secondContact.setFirstName("Ana");
 //        secondContact.setPhone("012345678");
 //        secondContact.setAddress("Atat s-a putut");
+//        agenda.getContactList().add(secondContact);
 //
 //        agenda.setNameAgenda("PrimaAgenda");
 //        agenda.setOwner("Burcus");
@@ -42,9 +46,8 @@ public class Agenda {
         agenda.getContactList().add(secondContact);
 
         printAgenda(agenda);
-        System.out.println("");
-        SaveToXml.WriteXMLFile(agenda);
 
+        XmlManipulation.writeAgendaToXMLFile(agenda);
     }
 
 
