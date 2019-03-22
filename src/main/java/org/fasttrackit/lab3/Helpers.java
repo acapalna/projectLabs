@@ -19,6 +19,7 @@ public class Helpers {
     public static Problema11 problema11 = new Problema11();
     public static Problema12 problema12 = new Problema12();
     public static Problema13_15 problema13 = new Problema13_15();
+    public static Problema16 problema16 = new Problema16();
 
     public static double getNumberFromUser(){
 
@@ -68,6 +69,13 @@ public class Helpers {
         for (Double nr : numbers){
             System.out.print(nr + ", ");
         }
+    }
+
+    public static void printIntNumbers(List<Integer> numbers){
+        for (int nr : numbers){
+            System.out.print(nr + ", ");
+        }
+        System.out.println("\nAti introdus " + numbers.size() + " numere.");
     }
 
     public static List<Double> getListOfDoubleNumbers(){

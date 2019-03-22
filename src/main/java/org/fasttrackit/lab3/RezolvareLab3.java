@@ -5,7 +5,7 @@ import static org.fasttrackit.lab3.Helpers.*;
 public class RezolvareLab3 {
 
     public static void main(String[] args){
-        problema1.exercitiul1();
+//        problema1.exercitiul1();
 //        problema2.ecercitiul2();
 //        problema2.exercitiul2Varianta2();
 //        problema3.exercitiul3();
@@ -23,6 +23,7 @@ public class RezolvareLab3 {
 //        problema13.exercitiul13();
 //        problema13.exercitiul14();
 //        problema13.exercitiul15();
+        problema16.exercitiul16();
 
 
 
