@@ -3,6 +3,8 @@ package org.fasttrackit.agenda.domain.helpers;
 import org.fasttrackit.agenda.domain.Agenda;
 import org.fasttrackit.agenda.domain.Contact;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Helpers {
@@ -37,11 +39,28 @@ public class Helpers {
     }
 
     public static void printAgenda(Agenda agenda){
-        System.out.println("Agenda name: " + agenda.getNameAgenda());
+        System.out.println("Agenda name: " + agenda.getAgendaName());
         System.out.println("Agenda owner: " + agenda.getOwner());
         for (Contact c : agenda.getContactList()){
             System.out.println(c.toString());
         }
+    }
+
+    public static List<Contact> createMultipleContacts(){
+        List<Contact> contactList = new ArrayList<>();
+        boolean a = true;
+
+        System.out.println("Insert contact details.");
+        while (a){
+            contactList.add(createNewContactFromUser());
+            System.out.println("Type \"yes\" to add a new contact.");
+            if (!scanner.nextLine().equalsIgnoreCase("yes")){
+                a = false;
+                System.out.println("Stop creating contacts");
+            }
+        }
+
+        return contactList;
     }
 
 }

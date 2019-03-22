@@ -1,63 +1,20 @@
 package org.fasttrackit.agenda.domain;
 
-import org.fasttrackit.agenda.domain.helpers.XmlManipulation;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.fasttrackit.agenda.domain.helpers.Helpers.*;
 
 public class Agenda {
-    private String nameAgenda;
+    private String agendaName;
     private String owner;
     private List<Contact> contactList = new ArrayList<>();
 
-    public static void main(String[] args) {
-        Agenda agenda = new Agenda();
-
-//        Contact firstContact = new Contact();
-//        firstContact.setLastName("vraja");
-//        firstContact.setFirstName("Ion");
-//        firstContact.setPhone("333333333");
-//        firstContact.setAddress("Asta-i primul");
-//        agenda.getContactList().add(firstContact);
-//
-//        Contact secondContact = new Contact();
-//        secondContact.setLastName("Pop");
-//        secondContact.setFirstName("Ana");
-//        secondContact.setPhone("012345678");
-//        secondContact.setAddress("Atat s-a putut");
-//        agenda.getContactList().add(secondContact);
-//
-//        agenda.setNameAgenda("PrimaAgenda");
-//        agenda.setOwner("Burcus");
-
-        System.out.println("Insert agenda name:");
-        agenda.setNameAgenda(readFromKeyboard());
-        System.out.println("Insert agenda owner");
-        agenda.setOwner(readFromKeyboard());
-
-        System.out.println("Create first contact");
-        Contact firstContact = createNewContactFromUser();
-        agenda.getContactList().add(firstContact);
-
-        System.out.println("Create second contact");
-        Contact secondContact = createNewContactFromUser();
-        agenda.getContactList().add(secondContact);
-
-        printAgenda(agenda);
-
-        XmlManipulation.writeAgendaToXMLFile(agenda);
+    public String getAgendaName() {
+        return agendaName;
     }
 
-
-
-    public String getNameAgenda() {
-        return nameAgenda;
-    }
-
-    public void setNameAgenda(String nameAgenda) {
-        this.nameAgenda = nameAgenda;
+    public void setAgendaName(String agendaName) {
+        this.agendaName = agendaName;
     }
 
     public String getOwner() {

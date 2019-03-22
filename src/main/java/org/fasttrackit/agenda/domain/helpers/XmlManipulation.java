@@ -32,7 +32,7 @@ public class XmlManipulation {
 
             // agendaNameElement elements
             Element agendaName = doc.createElement("agendaName");
-            agendaName.appendChild(doc.createTextNode(agenda.getNameAgenda()));
+            agendaName.appendChild(doc.createTextNode(agenda.getAgendaName()));
             agendaElementRoot.appendChild(agendaName);
 
             // agendaOwnerElement elements
@@ -74,7 +74,7 @@ public class XmlManipulation {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File(pathToXMLFiles + agenda.getNameAgenda() + ".xml"));
+            StreamResult result = new StreamResult(new File(pathToXMLFiles + agenda.getAgendaName() + ".xml"));
 
             // Output to console for testing
             // StreamResult result = new StreamResult(System.out);
