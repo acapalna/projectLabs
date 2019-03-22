@@ -20,6 +20,7 @@ public class Helpers {
     public static Problema12 problema12 = new Problema12();
     public static Problema13_15 problema13 = new Problema13_15();
     public static Problema16 problema16 = new Problema16();
+    public static Problema17 problema17 = new Problema17();
 
     public static double getNumberFromUser(){
 
@@ -175,5 +176,13 @@ public class Helpers {
         }
 
         return sum;
+    }
+
+    public static float nrLaPuterea(int x, int n){
+        float result = 1;
+        for(int i=1; i<=n; i++){
+            result = result*x;
+        }
+        return result;
     }
 }
