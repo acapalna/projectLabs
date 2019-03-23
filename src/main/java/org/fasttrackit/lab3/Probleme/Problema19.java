@@ -15,7 +15,7 @@ public class Problema19 {
         List<Integer> list = getListOfIntegerNumbers();
         System.out.println("Sirul introdus este: ");
         printIntNumbers(list);
-        System.out.println("Numerele dublate sunt");
+
         for (int i=0; i<list.size()/2; i++){
             System.out.println("Position " + i + " number is " + list.get(i) + " double ->" + (list.get(i) * 2));
         }
